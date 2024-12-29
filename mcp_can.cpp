@@ -329,6 +329,40 @@ INT8U MCP_CAN::mcp2515_configRate(const INT8U canSpeed, const INT8U canClock)
         }
         break;
 
+		case MCP_10MHZ:
+		switch (canSpeed)
+		{
+			case CAN_1000KBPS:
+			cfg1 = MCP_10MHz_1000kBPS_CFG1;
+			cfg2 = MCP_10MHz_1000kBPS_CFG2;
+			cfg3 = MCP_10MHz_1000kBPS_CFG3;
+			break;
+
+			case CAN_500KBPS:
+			cfg1 = MCP_10MHz_500kBPS_CFG1;
+			cfg2 = MCP_10MHz_500kBPS_CFG2;
+			cfg3 = MCP_10MHz_500kBPS_CFG3;
+			break;
+
+			case CAN_250KBPS:
+			cfg1 = MCP_10MHz_250kBPS_CFG1;
+			cfg2 = MCP_10MHz_250kBPS_CFG2;
+			cfg3 = MCP_10MHz_250kBPS_CFG3;
+			break;
+
+			case CAN_125KBPS:
+			cfg1 = MCP_10MHz_125kBPS_CFG1;
+			cfg2 = MCP_10MHz_125kBPS_CFG2;
+			cfg3 = MCP_10MHz_125kBPS_CFG3;
+			break;
+
+			default:
+			set = 0; // Unsupported baud rate for 10MHz
+		return MCP2515_FAIL;
+			break;
+		}
+		break;
+
         case (MCP_16MHZ):
         switch (canSpeed) 
         {
