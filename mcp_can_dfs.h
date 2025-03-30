@@ -312,6 +312,25 @@
 #define MCP_8MHz_5kBPS_CFG3 (0x84)     /* Sample point at 75% */
 
 /*
+** Add 10MHz configurations in mcp_can_dfs.h
+*/
+#define MCP_10MHz_1000kBPS_CFG1 (0x00)
+#define MCP_10MHz_1000kBPS_CFG2 (0xC8)
+#define MCP_10MHz_1000kBPS_CFG3 (0x80)
+
+#define MCP_10MHz_500kBPS_CFG1 (0x40)
+#define MCP_10MHz_500kBPS_CFG2 (0xD9)
+#define MCP_10MHz_500kBPS_CFG3 (0x82)
+
+#define MCP_10MHz_250kBPS_CFG1 (0x41)
+#define MCP_10MHz_250kBPS_CFG2 (0xD9)
+#define MCP_10MHz_250kBPS_CFG3 (0x82)
+
+#define MCP_10MHz_125kBPS_CFG1 (0x43)
+#define MCP_10MHz_125kBPS_CFG2 (0xD9)
+#define MCP_10MHz_125kBPS_CFG3 (0x82)
+
+/*
  *  speed 16M
  */
 #define MCP_16MHz_1000kBPS_CFG1 (0x00)
@@ -451,6 +470,7 @@
 #define MCP_20MHZ    0
 #define MCP_16MHZ    1
 #define MCP_8MHZ     2
+#define MCP_10MHZ     3
 #define MCP_CLOCK_SELECT 3
 #define MCP_CLKOUT_ENABLE 4
 
