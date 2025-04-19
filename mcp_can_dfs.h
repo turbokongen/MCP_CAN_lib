@@ -283,7 +283,7 @@
 #define MCP_8MHz_50kBPS_CFG2 (0xE5)    /* Enabled SAM bit     */
 #define MCP_8MHz_50kBPS_CFG3 (0x83)    /* Sample point at 75% */
 
-#define MCP_8MHz_47k619BPS_CFG1 (0xC7) /* Increased SJW       */
+#define MCP_8MHz_47k619BPS_CFG1 (0xC3) /* Increased SJW       */
 #define MCP_8MHz_47k619BPS_CFG2 (0xBE) /* Enabled SAM bit     */
 #define MCP_8MHz_47k619BPS_CFG3 (0x04) /* Sample point at 75% */
 
